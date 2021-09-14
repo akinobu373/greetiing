@@ -19,4 +19,4 @@ Route::get('/', function () {
 
 Route::get('/comments/random',[App\Http\Controllers\MessageController::class, 'random']);
 Route::get('/comments/{time}',[App\Http\Controllers\MessageController::class, 'greeting']);
-Route::get('/comments/freeword/{msg}',[App\Http\Controllers\FreemessageController::class, 'message']);
+Route::get('/comments/freeword/{msg}',[App\Http\Controllers\MessageController::class, 'message']);

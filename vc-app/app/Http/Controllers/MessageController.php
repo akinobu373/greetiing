@@ -8,8 +8,6 @@ class MessageController extends Controller
 {
     public function greeting($time)
     {
-
-
         if ($time == 'morning') {
             $comment = '朝のあいさつ';
             $greet = 'おはようございます';
@@ -31,6 +29,10 @@ class MessageController extends Controller
             'comment' => $comment,
             'greet' => $greet
         ]);
+    }
+
+    public function message($msg){
+        return view ('message',['msg' => $msg]);
     }
 
     public function random()
